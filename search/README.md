@@ -1,4 +1,4 @@
-Préparation de la configuration Docker
+Configuration des Docker
 -------
 1. Créer le répertoire contenant les conteneurs
 ```
@@ -13,7 +13,7 @@ cp devoxx_search_docker_images.tar ~/devoxx/search/docker
 docker load --input devoxx_search_docker_images.tar
 ```
 
-Préparation de la donnée
+Configuration de Pelias
 -------
 
 1. Créer le répertoire contenant la donnée __Paris__
@@ -40,6 +40,9 @@ docker-compose up -d api
 ```
 curl http://localhost:4000/v1/search?text=paris
 ```
+
+Importation des données
+-------
 7. Copier/coller la fichier __paris.osm.pbf__ OSM Paris dans le répertoire d'Elasticsearch
 ```
 cp DEVOXX_SUPPORT/paris.osm.pbf ~/devoxx/search/data/openstreetmap/
